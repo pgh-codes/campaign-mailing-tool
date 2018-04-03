@@ -1,0 +1,117 @@
+// main: ../site.less
+@import '../vars-mixins';
+
+h1, h2, h3, p, span {
+	padding: 0;
+	margin: 0;
+	color: @gray-dark;
+
+	&.white {
+		color: @white !important
+	}
+
+	&.sans {
+		.sans;
+	}
+
+	&.serif {
+		.serif;
+	}
+}
+
+.h1() {
+	.serif;
+	.font-size(28);
+	.line-height(32);
+	color: @dark-blue;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+
+	@media @medium {
+		.font-size(32);
+		.line-height(36);
+	}
+}
+
+.h2() {
+	font-family: @serif;
+	font-weight: bold;
+	.font-size(26);
+	.line-height(36);
+	color: @red;
+	margin-bottom: 10px;
+}
+
+.h3() {
+	.sans;
+	.font-size(18);
+	.line-height(28);
+	font-weight: bold;
+	color: @blue;
+	margin-bottom: 5px;
+
+}
+
+h1, .h1 { .h1() }
+h2, .h2 { .h2() }
+h3, .h3 { .h3() }
+
+p {
+
+	+ p {
+		padding-top: 10px;
+
+		@media @medium {
+			padding-top: 16px;
+		}
+	}
+
+	&.large {
+		.font-size(18);
+		.line-height(28);
+	}
+}
+
+ul, ol {
+	padding: 3px 0 0 18px;
+	margin: 0 0 0 18px;
+
+	li {
+		margin: 0;
+		padding-bottom: 15px;
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+
+	+ p {
+		padding-top: 20px;
+	}
+
+	+ h2, + h3, + h4 {
+		padding-top: 30px;
+	}
+
+	li ul {
+		margin: 6px 0 0 18px;
+
+		li {
+			padding-bottom: 10px;
+		}
+	}
+}
+
+ul + ul, ol + ol,
+ul + ol, ol + ul {
+	padding-top: 20px;
+}
+
+h2 + ul, h3 + ul, h4 + ul, h5 + ul,
+h2 + ol, h3 + ol, h4 + ol, h5 + ol {
+	padding-top: 8px;
+}
+
+p + ul, p + ol {
+	padding-top: 10px;
+}

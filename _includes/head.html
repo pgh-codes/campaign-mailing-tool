@@ -1,0 +1,30 @@
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#2e669c">
+
+	<title>{{ site.data.settings.seo.title }}</title>
+	<meta name="description" content="{{ site.data.settings.seo.description }}" />
+	<meta name="keywords" content="{{ site.data.settings.seo.keywords }}" />
+
+	{% include favicons.html %}
+
+	<!-- Open Graph data -->
+	<meta property="og:site_name" content="{{ site.data.settings.seo.title }}" />
+	<meta property="og:title" content="{{ site.data.settings.seo.title }} / {{ page.title }}" />
+	<meta property="og:description" content="{{ site.data.settings.seo.description }}" />
+	<meta property="og:url" content="{{ page.url }}" />
+	<meta property="og:image" content="https://www.tanzarkennels.com/assets/imgs/theme/social-sharing.jpg" />
+	<meta property="article:published_time" content=" {{ site.time }}" />
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Zilla+Slab:400,600" rel="stylesheet">
+	<link href="/assets/css/site.css" rel="stylesheet">
+
+	{{ page.head }}
+</head>
+

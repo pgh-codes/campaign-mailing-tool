@@ -1,0 +1,105 @@
+// main: ../site.less
+@import '../vars-mixins';
+
+.btn, button {
+	display: inline-block;
+	padding: 8px 15px;
+	background-color: @blue;
+	.sans;
+	color: @white;
+	.font-size(16);
+	text-align: center;
+	letter-spacing: .07em;
+	border-radius: 2px;
+	outline: none;
+	border: 0;
+	vertical-align: middle;
+	transition: background-color 0.2s, color .2s;
+	width: auto;
+	margin-bottom: 0;
+	text-transform: uppercase;
+
+	svg.icon use {
+		fill: @white;
+	}
+
+	&:hover {
+		color: @white;
+		background-color: darken(@blue, 10%);
+		text-decoration: none !important;
+	}
+
+	// Variations
+	&.small {
+		.font-size(14);
+		.line-height(19);
+		padding: 6px 12px;
+	}
+
+	&.med {
+		.font-size(15);
+		.line-height(20);
+		padding: 6px 13px;
+	}
+
+	&.block {
+		display: block;
+		width: 100%;
+	}
+
+	&.block-50 {
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	&.gray {
+		background-color: @gray;
+
+		&:hover {
+			background-color: darken(@gray, 15%);
+		}
+	}
+
+	&.red {
+		background-color: @red;
+
+		&:hover {
+			background-color: darken(@red, 15%);
+		}
+	}
+
+	&.text {
+		background-color: @transparent;
+		padding-left: 5px;
+		padding-right: 5px;
+		position: relative;
+		transition: color 0.4s ease 0s;
+
+		&:before, &:after {    
+			background: none repeat scroll 0 0 transparent;
+			bottom: 0;
+			left: 0;
+			content: "";
+			display: block;
+			height: 2px;
+			position: absolute;
+			background: @white;
+			width: 100%;
+		}
+
+		&:after {    
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+			width: 0;
+		}
+
+		&:hover {
+			color: @blue;
+
+			&:after { 
+				width: 100%;
+				background: @blue;
+			}
+		}
+	}
+}

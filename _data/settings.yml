@@ -1,0 +1,13 @@
+#-------------------------------
+# General Site Info
+
+email: mc@tinyatom.net
+url: "" # the base hostname & protocol for your site
+
+#-------------------------------
+# Base SEO
+
+seo:
+ title: Letters for Summer Lee | Campaign Mailer Tool
+ description: The Letters for Summer Lee Campaign Mailer Tool is designed to help people get their friends out to vote!
+ keywords: voting, Pittsburgh, political letters

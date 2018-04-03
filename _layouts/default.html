@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	<body>
+		{% include svg-sprite.html %}
+
+		<div id="page-wrap">
+			{% include header.html %}
+			<div class="content-wrap">
+				{{ content }}
+				{% include footer.html %}
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="/assets/js/main.min.js"></script>
+		{{ page.footerScripts }}
+	</body>
+</html>

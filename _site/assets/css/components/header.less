@@ -1,0 +1,26 @@
+// main: ../site.less
+@import '../vars-mixins';
+
+header {
+	.flex-display;
+	.justify-content(space-between);
+	.align-items(center);
+	.flex-wrap(wrap);
+	background-color: @dark-blue;
+	padding: 20px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	
+	@media @medium {
+		padding: 25px;
+	}
+
+	.btn {
+		.flex(0 0 auto);
+		margin-top: 12px;
+
+		@media @medium {
+			margin-top: 0;
+		}
+	}
+}
