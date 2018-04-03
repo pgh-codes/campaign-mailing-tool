@@ -3,6 +3,12 @@
 
 table {
     width: 100%;
+    margin-top: 10px;
+
+    tr {
+        transition: background-color .2s;
+        border-bottom: 1px solid @white;
+    }
 
     td {
         padding: 10px 5px; 
@@ -30,10 +36,77 @@ table {
             input[type=checkbox] {
                 margin: 0 auto;
             }
+
+            &.mobile-only {
+                display: none;
+            }
         }
 
         > tr:nth-of-type(odd){
             background-color: lighten(@gray-light, 5%);
+        }
+
+        > tr.selected {
+            background-color: @valid !important;
+        }
+    }
+}
+
+@media @small-max {
+
+    table {
+        tr {
+            padding: 10px; 
+        }
+
+        td {
+            padding: 0;
+            display: block;
+
+            &:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+            }
+
+            &.name {
+                display: block;
+            }
+
+            &.street-num,
+            &.street-name {
+                padding: 0;
+                display: inline;
+            }
+
+            &.select {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid @gray;
+
+                input[type=checkbox]{
+                    float: right;
+                }
+            }
+
+            &.desktop-only {
+                display: none;
+            }
+
+            &.mobile-only {
+                display: block !important;
+            }
+        }
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            tr {
+                display: block;
+                margin-bottom: .625em;
+            }
         }
     }
 }

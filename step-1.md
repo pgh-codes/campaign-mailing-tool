@@ -115,16 +115,16 @@ permalink: /step-1
         <small><sup class="required">*</sup>Required field</small>
     </div>
 
-    <div class="field-group col-12 space-above-half">
+    <div class="field-group col-12 space-around-half">
         <div class="row">
-            <div class="col-sm-6">
-                <a href="/" class="btn block gray"><svg aria-hidden="true" class="icon rotate-left"><use xlink:href="#icon-arrow" href="#icon-arrow"></use></svg> Start Over</a>
+            <div class="col-sm-6 order-sm-2 text-right">
+                <a href="/step-2" class="btn block">Next <svg aria-hidden="true" class="icon rotate-right"><use xlink:href="#icon-arrow" href="#icon-arrow"></use></svg></a>
             </div>
 
             <div class="mobile-space"></div>
             
-            <div class="col-sm-6 text-right">
-                <a href="/step-2" class="btn block">Next <svg aria-hidden="true" class="icon rotate-right"><use xlink:href="#icon-arrow" href="#icon-arrow"></use></svg></a>
+            <div class="col-sm-6 order-sm-1">
+                <a href="/" class="btn block gray"><svg aria-hidden="true" class="icon rotate-left"><use xlink:href="#icon-arrow" href="#icon-arrow"></use></svg> Start Over</a>
             </div>
         </div>
     </div>

@@ -1,12 +1,14 @@
 var CMT = CMT || {};
-CMT.animations = CMT.nav || {};
+CMT.ui = CMT.nav || {};
 
-CMT.animations = {
+CMT.ui = {
 	init: function() {
-
+		$('input[name=includeRecipient]').change(function(){
+			$(this).parent().parent().toggleClass('selected');
+		})
 	}
 };
 
 $(document).ready(function() {
-	CMT.animations.init();
+	CMT.ui.init();
 });
