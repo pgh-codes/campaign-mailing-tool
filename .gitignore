@@ -1,6 +1,9 @@
 .vscode/
 */.vscode/
 */prepros.cfg
+/_site/*
+*/_site
+_site/
 
 #################
 ## Eclipse
